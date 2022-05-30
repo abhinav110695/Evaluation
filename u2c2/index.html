@@ -10,7 +10,53 @@
         margin: 0px;
         padding: 0px;
       }
-
+      #banner{
+        border: 1px solid black;
+        width: 80%;
+        height: 250px;
+        margin: auto;
+        border-radius: 20px;
+        display: flex;
+      }
+      #banner>div:nth-child(1){
+        border: 1px solid #353b95;
+        width: 60%;
+        padding:50px;
+        background-color: #353b95;
+        color: white;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+      #banner>div:nth-child(1)>h2{
+        font-size: 26px;
+      }
+      #banner>div:nth-child(1)>p{
+        padding-top: 15px ;
+        font-size: small;
+      }
+      #banner>div:nth-child(1)>button{
+        border-radius: 7px;
+        background-color: #f1f0ef;
+        border: 1px solid transparent;
+        width:70px;
+        height: 20px;
+        font-size: 11px;
+        margin-top: 10px;
+      }
+      #banner>div:nth-child(2){
+        border: 1px solid #353b95;
+        width: 40%;
+        background-color: #353b95;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      #banner>div:nth-child(2)>img{
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
+      }
 
 
       /* Medium Screen */
@@ -26,6 +72,14 @@
     <div id="main">
       <div id="banner">
         <!-- Here should be 2 divs one for the banner heading and button and the second is for banner image -->
+        <div>
+          <h2>You are in safe hands</h2>
+          <p>Choose the experts in end to end surgical care</p>
+          <button>Know More</button>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/practo-care/1631634827/dweb_hero_banner.png" alt="err">
+        </div>
       </div>
       <div id="services">
         <!-- Here should be 6 divs. All of them should be in a single line for large screen. For medium and large screen refer to question statement -->
