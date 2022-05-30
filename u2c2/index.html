@@ -71,6 +71,7 @@
         margin-top: 30px;
         height: 250px;
 
+
         display: grid;
         grid-template-columns: repeat(6,1fr);
         grid-template-rows: repeat(240px);
@@ -112,7 +113,7 @@
       #works>div{
         margin-top: 25px;
         width: 100%;
-        border: 1px solid green;
+        border: 1px solid transparent;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(2,250px);
@@ -162,7 +163,16 @@
           grid-template-rows: repeat(2,auto);
           margin-top: 200px;
           width: 100%;
-          margin: auto;
+        
+        }
+        #works{
+          margin-top: 250px;
+        }
+        #works>div{
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: repeat(4,auto);
+          margin-top: 0px;
+          width: 100%;
         }
 
         
@@ -190,11 +200,18 @@
         #services{
           grid-template-columns: repeat(2,1fr);
           grid-template-rows: repeat(3,auto);
-          margin-top: 320px;
+          margin-top: 330px;
           width: 100%;
-          margin: auto;
         }
-        
+        #works{
+          margin-top: 500px;
+        }
+        #works>div{
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: repeat(8,auto);
+          margin-top: 0px;
+          width: 100%;
+        }
 
       }
     </style>
