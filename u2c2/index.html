@@ -10,8 +10,13 @@
         margin: 0px;
         padding: 0px;
       }
+      #main{
+        border: 1px solid transparent;
+        width: 100%;
+        margin: auto;
+      }
       #banner{
-        border: 1px solid black;
+        border: 1px solid transparent;
         width: 80%;
         height: 250px;
         margin: auto;
@@ -61,7 +66,7 @@
       
       #services{
         width: 80%;
-        border: 1px solid black;
+        border: 1px solid transparent;
         margin: auto;
         margin-top: 30px;
         height: 250px;
@@ -95,7 +100,7 @@
       #works{
         width: 80%;
         margin: auto;
-        border: 1px solid black;
+        border: 1px solid transparent;
         margin-top: 60px;
       }
       #works>h1{
@@ -127,16 +132,70 @@
         padding-left: 10px;
         font-size: 14px;
       }
-      
+
 
 
 
       /* Medium Screen */
       @media only screen and (min-width: 500px) and (max-width: 768px) {
+        #banner{
+          flex-direction: column;
+          width: 100%;
+          margin: auto;
+        }
+        #banner>div:nth-child(1){
+          width: 100%;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 20px;
+          background-color: #353b95;
+        }
+        #banner>div:nth-child(2){
+          width: 114%;
+          height: 100%; 
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 0px;
+          background-color: #353b95;
+        }
+
+        #services{
+          grid-template-columns: repeat(3,1fr);
+          grid-template-rows: repeat(2,auto);
+          margin-top: 200px;
+          width: 100%;
+          margin: auto;
+        }
+
+        
       }
 
       /* Small Screen */
       @media only screen and (min-width: 320px) and (max-width: 499px) {
+        #banner{
+          flex-direction: column;
+          width: 100%;
+        }
+        #banner>div:nth-child(1){
+          width: 100%;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 20px;
+          background-color: #353b95;
+        }
+        #banner>div:nth-child(2){
+          width: 122%;
+          height: auto; 
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 0px;
+          background-color: #353b95;
+        }
+        #services{
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: repeat(3,auto);
+          margin-top: 320px;
+          width: 100%;
+          margin: auto;
+        }
+        
+
       }
     </style>
   </head>
