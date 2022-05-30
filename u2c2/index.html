@@ -54,9 +54,61 @@
         width: 100%;
         height: 100%;
         border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        
+        border-bottom-right-radius: 20px; 
       }
+
+
+      
+      #services{
+        width: 80%;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 30px;
+        height: 250px;
+
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(240px);
+        gap: 25px;
+      }
+      #services>div{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      #services>div>img{
+        width: 100%;
+        height:160px;
+        background-color: #b5cee8;
+      }
+      #services>div>h2{
+        font-size: 17px;
+        padding-top: 10px;
+        padding-left:20px ;
+      }
+      #services>div>p{
+        padding-left:20px;
+        color: #a9a8a9;
+        font-size: 15px;
+        padding-top: 5px;
+      }
+
+
+      #works{
+        width: 80%;
+        margin: auto;
+        border: 1px solid black;
+        margin-top: 60px;
+        text-align: center;
+      }
+      #works>div{
+        width: 100%;
+        border: 1px solid green;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,250px);
+        gap: 25px;
+      }
+      
+
 
 
       /* Medium Screen */
@@ -83,12 +135,51 @@
       </div>
       <div id="services">
         <!-- Here should be 6 divs. All of them should be in a single line for large screen. For medium and large screen refer to question statement -->
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="err">
+          <h2>Instant Video Consultation</h2>
+          <p>Connect within 60 secs</p>
+        </div>
+        
       </div>
       <div id="works">
         <h1>Book an appointment for an in-clinic consultation</h1>
         <p>Find experienced doctors across all specialties</p>
         <div>
           <!-- Here should be 8 divs. They should be in 4 colums and two rows for large screen.For medium and large screen refer to question statement -->
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
     </div>
