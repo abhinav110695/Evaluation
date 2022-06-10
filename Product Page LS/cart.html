@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #add{
+            margin-left: 10px;
+        }
+        #add+p{
+            display:inline;
+            margin-left: 10px;
+        }
+        #add+p+#sub{
+            margin-left: 10px;
+        }
+        h1+h1{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cart</h1>
+    <h1 id="item">Total Items in Cart:</h1>
+    <h1 id="amt">Total Amount=</h1>
+</body>
+</html>
+
+<script>
+    let counter=localStorage.getItem("localCounter")||[];
+let datafrommen=JSON.parse(localStorage.getItem("selected"))||[]; 
+displayItem(datafrommen);
+    
+    function displayItem(datafrommen){
+
+    datafrommen.forEach(function(el,index){ 
+        let box=document.createElement("div")
+        box.setAttribute("id","boxes")
+
+        let image1=document.createElement("img")
+        image1.setAttribute("src",el.image_url)
+
+        let Name=document.createElement("p")
+        Name.innerText=el.name;
+        
+        let prices=document.createElement("p")
+        if(counter>=1){
+        prices.innerText=el.price*counter
+        }
+
+        let adc=document.createElement("button")
+        adc.innerText="Remove from Cart";
+        adc.addEventListener("click",function(){
+            removecartFunc(index);
+          })
+
+        let plus=document.createElement("button")
+        plus.innerText="+"
+        plus.setAttribute("id","add")
+        plus.addEventListener("click",function(){
+            plusFunc(el);
+          })
+
+        let count=document.createElement("p")
+        count.setAttribute("id","c")
+        count.innerText=counter
+
+        let minus=document.createElement("button")
+        minus.innerText="-"
+        minus.setAttribute("id","sub")
+        minus.addEventListener("click",function(){
+            minusFunc(el);
+          })
+
+        box.append(image1,Name,prices,adc,plus,count,minus)
+        document.querySelector("body").append(box)        
+
+    });
+    }
+
+    function removecartFunc(index){
+      datafrommen.splice(index,1);
+      localStorage.setItem("selected",JSON.stringify(datafrommen))
+      window.location.reload();
+    }
+
+    function plusFunc(el){
+        counter++;
+        document.querySelector("#c").innerText=counter;
+        localStorage.setItem("localCounter",counter)
+        window.location.reload();
+    }
+
+    function minusFunc(el){
+        counter--;
+        document.querySelector("#c").innerText=counter;
+        localStorage.setItem("localCounter",counter);
+        window.location.reload();
+    }
+
+</script>
